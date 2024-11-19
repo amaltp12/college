@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container shadow m-5">
+        <form action="/updateteacher/{{view.id}}" method="POST">
+            {% csrf_token %}
+            <label for="" class="form-label">FIRSTNAME</label>
+            <input type="text" name="fname" value="{{data.first_name}}" class="form-control">
+            <label for="" class="form-label">LASTNAME</label>
+            <input type="text" name="lname" value="{{data.last_name}}" class="form-control">
+            <label for="" class="form-label">EMAIL</label>
+            <input type="text" name="email" value="{{data.email}}" class="form-control">
+            <label for="" class="form-label">USERNAME</label>
+            <input type="text" name="uname" value="{{data.username}}" class="form-control">
+
+            <label for="" class="form-label">AGE</label>
+            <input type="text" name="age" value="{{view.Age}}" class="form-control">
+            <label for="" class="form-label">ADDRESS</label>
+            <input type="text" name="address" value="{{view.Address}}" class="form-control">
+            <label for="" class="form-label">QUALiFICATION</label>
+            <input type="text" name="qual" value="{{view.Qualification}}" class="form-control">
+            <input type="submit" value="UPDATE" class="btn btn-success">
+        </form>
+    </div>
+</body>
+</html>
